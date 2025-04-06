@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: 7a92c352d93d88d44ac8cd346a8a1166, type: 2}
-  _masterVolumeName: MasterVolume
+  _masterVolumeName: Master

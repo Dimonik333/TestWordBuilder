@@ -28,13 +28,17 @@ namespace WordBuilder
             CopyWordParts(words, wordParts);
             ShuffleParts(wordParts);
             CreateBlock(wordParts);
-            
+
             ListPool<string>.Release(wordParts);
         }
         public bool IsCompleted()
         {
             return _targetWords.All(targetWord => _targetContainers.Any(c => c.Word == targetWord));
         }
+
+        public string Result()
+            => string.Join("\n", _targetContainers.Select(c => c.Word).ToArray());
+
 
         private void CopyWordParts(string[][] words, List<string> wordParts)
         {
@@ -67,7 +71,5 @@ namespace WordBuilder
                 _container.AddItem(block, Vector2.zero);
             }
         }
-
-
     }
 }

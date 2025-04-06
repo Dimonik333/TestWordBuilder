@@ -27,7 +27,8 @@ namespace WordBuilder
                     SceneController.CurrentSceneActions.InvokeAction(SceneActionLifePoint.BeforeFadeOut);
                     FadeManager.Instance.BlackFade.Hide();
                     SceneController.CurrentSceneActions.InvokeAction(SceneActionLifePoint.AfterFadeOut);
-                });          
+                });
+            _command.Execute();
         }
     }
 }

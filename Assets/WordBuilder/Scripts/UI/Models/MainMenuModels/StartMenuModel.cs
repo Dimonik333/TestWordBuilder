@@ -4,7 +4,7 @@ namespace WordBuilder
     {
         public void StartGame()
         {
-            // Load scene
+            SceneTransitionManager.Instance.ChangeScene("Game");
         }
     }
 }

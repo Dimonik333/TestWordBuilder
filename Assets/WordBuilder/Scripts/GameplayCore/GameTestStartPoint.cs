@@ -7,7 +7,7 @@ namespace WordBuilder
     {
         [SerializeField] private GameField _gameField;
 
-        private void Start()
+        public void StartGame()
         {
             var words = new string[][]
             {
@@ -20,7 +20,7 @@ namespace WordBuilder
         }
 
         [ContextMenu("Check")]
-        public void Check() 
+        public void Check()
         {
             var res = _gameField.IsCompleted();
         }

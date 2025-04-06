@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace WordBuilder
 {
-
     public abstract class SceneController : MonoBehaviour
     {
         private Dictionary<SceneActionLifePoint, Action> _actions = new();
@@ -36,5 +35,4 @@ namespace WordBuilder
         BeforeFadeIn,
         AfterFadeIn,
     }
-
 }

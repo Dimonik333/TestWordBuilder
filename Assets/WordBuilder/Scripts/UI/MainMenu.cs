@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace WordBuilder
 {
+
     public sealed class MainMenu : MonoBehaviour
     {
         private MainMenuModel _model;
