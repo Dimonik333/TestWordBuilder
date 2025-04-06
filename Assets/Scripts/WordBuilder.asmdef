@@ -2,7 +2,9 @@
     "name": "WordBuilder",
     "rootNamespace": "",
     "references": [
-        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:a1953a3df6819694e8bdcd9e3f597d95",
+        "GUID:65265d3a48a13204f9cad7fc00f77441"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
