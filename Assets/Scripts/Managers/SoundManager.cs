@@ -18,7 +18,6 @@ namespace WordBuilder
         [Space]
         [SerializeField] private string _masterVolumeName = "MasterVolume";
 
-        public static SoundManager Instance { get; }
 
         public float MasterVolume
         {

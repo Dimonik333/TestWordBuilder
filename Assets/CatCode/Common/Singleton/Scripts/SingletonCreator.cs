@@ -37,6 +37,16 @@ namespace CatCode
             return false;
         }
 
+        public static void UpdateInstance(T instance)
+        {
+            var attribute = typeof(T).GetCustomAttribute<ObjectCreationConfigAttribute>(false)
+                ?? ObjectCreationConfigAttribute.Default;
+
+            if (attribute.DontDestroyOnLoad && Application.isPlaying)
+                Object.DontDestroyOnLoad(instance);
+            instance.gameObject.hideFlags = attribute.HideFlags;
+        }
+
         public static bool TryFindOnScene(out T instance)
         {
             instance = Object.FindFirstObjectByType<T>();

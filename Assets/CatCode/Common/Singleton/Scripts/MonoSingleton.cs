@@ -23,6 +23,8 @@ namespace CatCode
                 {
                     if (!SingletonCreator<T>.TryGetInstance(out T instance))
                         throw new Exception($"Instance {typeof(T).Name} - Not Created");
+                    else
+                        SingletonCreator<T>.UpdateInstance(instance);
                     SetInstance(instance);
                 }
                 return _instance;
