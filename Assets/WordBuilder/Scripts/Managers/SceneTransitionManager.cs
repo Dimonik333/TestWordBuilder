@@ -24,6 +24,7 @@ namespace WordBuilder
                 })
                 .AddOnFinished(() =>
                 {
+                    SceneController.CurrentSceneActions.SetControled();
                     SceneController.CurrentSceneActions.InvokeAction(SceneActionLifePoint.BeforeFadeOut);
                     FadeManager.Instance.BlackFade.Hide();
                     SceneController.CurrentSceneActions.InvokeAction(SceneActionLifePoint.AfterFadeOut);

@@ -7,11 +7,13 @@ namespace WordBuilder
         private ActiveGameModel _model;
         private ActiveGamePresenter _presenter;
         [SerializeField] private GameField _gameField;
-
         [SerializeField] private ActiveGameView _view;
-        private void Start()
+        [SerializeField] private ActiveGameMenu _activeGameMenu;
+        [SerializeField] private CompletedGameMenu _completedGameMenu;
+
+        private void Awake()
         {
-            _model = new ActiveGameModel();
+            _model = new ActiveGameModel(_gameField,_activeGameMenu, _completedGameMenu);
             _presenter = new ActiveGamePresenter();
             _presenter.Initialize(_model, _view);
         }

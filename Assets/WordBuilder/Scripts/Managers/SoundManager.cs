@@ -11,13 +11,13 @@ namespace WordBuilder
        resourceName: "Singletons/" + nameof(SoundManager))]
     public sealed class SoundManager : MonoSingleton<SoundManager>
     {
-        private const float MinValue = 0.001f;
+        private const float MinValue = 0.0001f;
         private const float MaxValue = 1.0f;
 
         [SerializeField] private AudioMixer _audioMixer;
         [Space]
-        [SerializeField] private string _masterVolumeName = "MasterVolume";
-
+        [SerializeField] private string _masterVolumeName = "Master";
+        [SerializeField] private AudioSource _audioSource;
 
         public float MasterVolume
         {
@@ -33,6 +33,11 @@ namespace WordBuilder
                 var volume = Mathf.Log10(value) * 20;
                 _audioMixer.SetFloat(_masterVolumeName, volume);
             }
+        }
+
+        public void Play(AudioClip clip)
+        {
+            _audioSource.PlayOneShot(clip);
         }
     }
 }

@@ -6,6 +6,7 @@ namespace WordBuilder
         protected override void OnActivate()
         {
             _view.Text = _model.Text;
+            _view.PlayAudio();
 
             _view.MainMenuButtonClicked += OnMainMenuButtonClicked;
             _view.NextLevelButtonClicked += OnNextLevelButtonClicked;

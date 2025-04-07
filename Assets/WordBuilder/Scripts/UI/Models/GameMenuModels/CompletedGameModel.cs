@@ -6,6 +6,11 @@ namespace WordBuilder
     {
         private readonly GameField _gameField;
 
+        public CompletedGameModel(GameField gameField)
+        {
+            _gameField = gameField;
+        }
+
         public string Text
         {
             get => _gameField.Result();

@@ -10,9 +10,9 @@ namespace WordBuilder
         [SerializeField] private GameField _gameField;
         [SerializeField] private CompletedGameView _view;
 
-        private void Start()
+        private void Awake()
         {
-            _model = new ();
+            _model = new (_gameField);
             _presenter = new ();
             _presenter.Initialize(_model, _view);
         }
