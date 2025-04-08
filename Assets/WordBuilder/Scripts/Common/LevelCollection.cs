@@ -2,8 +2,6 @@
 
 namespace WordBuilder
 {
-
-
     [Serializable]
     public sealed class LevelCollection
     {
