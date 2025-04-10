@@ -37,10 +37,12 @@ namespace WordBuilder
             var distance = Vector3.Distance(_startPosition, _currentPosition);
             if (distance > _holdDistance && !_drag)
             {
-                _drag = true;
                 var direction = _currentPosition - _startPosition;
                 if (Vector3.Dot(Vector3.up, direction.normalized) > 0.8)
+                {
+                    _drag = true;
                     StartDrag(eventData);
+                }
             }
         }
 
